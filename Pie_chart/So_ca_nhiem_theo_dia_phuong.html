@@ -1,0 +1,87 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  font-weight: bold;
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/dataviz.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_dataviz);
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+// Add data
+chart.data = [ 
+{
+  "name": "Đà Nẵng",
+  "value": 480
+}, {
+  "name": "Quảng Ngãi",
+  "value": 447
+}, {
+  "name": "Quảng Nam",
+  "value": 74
+}, {
+  "name": "Hà Nội",
+  "value": 6
+}, {
+  "name": "Đắk Lắk",
+  "value": 3
+}, {
+  "name": "HCM",
+  "value": 8
+}, {
+  "name": "Thái Bình",
+  "value": 1
+}, {
+  "name": "Đồng Nai",
+  "value": 2
+}, {
+  "name": "Hải Dương",
+  "value": 3
+}, {
+  "name": "Quảng Trị",
+  "value": 4
+}, {
+  "name": "Bắc Giang",
+  "value": 5
+}, {
+  "name": "Lạng Sơn",
+  "value": 4
+}
+];
+
+// Add and configure Series
+var pieSeries = chart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "value";
+pieSeries.dataFields.category = "name";
+pieSeries.slices.template.stroke = am4core.color("#fff");
+pieSeries.slices.template.strokeWidth = 2;
+pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates initial animation
+pieSeries.hiddenState.properties.opacity = 1;
+pieSeries.hiddenState.properties.endAngle = -90;
+pieSeries.hiddenState.properties.startAngle = -90;
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
