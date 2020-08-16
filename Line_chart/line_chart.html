@@ -1,0 +1,220 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+//
+
+// Increase contrast by taking evey second color
+chart.colors.step = 2;
+
+// Add data
+// chart.data = generateChartData();  
+
+// Create axes
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.minGridDistance = 0;
+//Date Format
+// chart.dateFormatter.dateFormat = "yyyy-MM-dd";
+
+// Create series
+function createAxisAndSeries(fields, name, opposite, bullet) {
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+  if(chart.yAxes.indexOf(valueAxis) != 0){
+    valueAxis.syncWithAxis = chart.yAxes.getIndex(0);
+  }
+  
+  var series = chart.series.push(new am4charts.LineSeries());
+  series.dataFields.valueY = fields;
+  series.dataFields.dateX = "date";
+  series.strokeWidth = 2; 
+  series.yAxis = valueAxis;
+  series.name = name;
+  series.tooltipText = "{name}: [bold]{valueY}[/]";
+  series.tensionX = 0.8;
+  series.showOnInit = true;
+  
+  var interfaceColors = new am4core.InterfaceColorSet();
+  
+  switch(bullet) {
+    case "triangle":
+      var bullet = series.bullets.push(new am4charts.Bullet());
+      bullet.width = 12;
+      bullet.height = 12;
+      bullet.horizontalCenter = "middle";
+      bullet.verticalCenter = "middle";
+      
+      var triangle = bullet.createChild(am4core.Triangle);
+      triangle.stroke = interfaceColors.getFor("background");
+      triangle.strokeWidth = 2;
+      triangle.direction = "top";
+      triangle.width = 12;
+      triangle.height = 12;
+      break;
+    case "rectangle":
+      var bullet = series.bullets.push(new am4charts.Bullet());
+      bullet.width = 10;
+      bullet.height = 10;
+      bullet.horizontalCenter = "middle";
+      bullet.verticalCenter = "middle";
+      
+      var rectangle = bullet.createChild(am4core.Rectangle);
+      rectangle.stroke = interfaceColors.getFor("background");
+      rectangle.strokeWidth = 2;
+      rectangle.width = 10;
+      rectangle.height = 10;
+      break;
+    default:
+      var bullet = series.bullets.push(new am4charts.CircleBullet());
+      bullet.circle.stroke = interfaceColors.getFor("background");
+      bullet.circle.strokeWidth = 2;
+      break;
+  }
+  
+  valueAxis.renderer.line.strokeOpacity = 1;
+  valueAxis.renderer.line.strokeWidth = 2;
+  valueAxis.renderer.line.stroke = series.stroke;
+  valueAxis.renderer.labels.template.fill = series.stroke;
+  valueAxis.renderer.opposite = opposite;
+}
+
+createAxisAndSeries("visits", "Ca mắc xâm nhập", false, "circle");
+createAxisAndSeries("views", "Tổng số ca mắc", true, "triangle");
+createAxisAndSeries("hits", "Ca mắc cộng đồng", true, "rectangle");
+
+// Add legend
+chart.legend = new am4charts.Legend();
+
+// Add cursor
+chart.cursor = new am4charts.XYCursor();
+
+// generate some random data, quite different range
+var chartData = [
+  {
+    "date": "08-01-2020",
+    "visits": 0,
+    "views": 0,
+    "hits": 0
+  }, 
+  {
+    "date": "08-02-2020",
+    "visits": 284,
+    "views": 751,
+    "hits": 448
+  }, 
+  {
+    "date": "08-03-2020",
+    "visits": 300,
+    "views": 795,
+    "hits": 495
+  }, 
+  {
+    "date": "08-04-2020",
+    "visits": 332,
+    "views": 816,
+    "hits": 496
+  },
+  {
+    "date": "08-05-2020",
+    "visits": 16,
+    "views": 821,
+    "hits": 516
+  },
+  {
+    "date": "08-06-2020",
+    "visits": 32,
+    "views": 832,
+    "hits": 528
+  },
+  {
+    "date": "08-07-2020",
+    "visits": 46,
+    "views": 854,
+    "hits": 548
+  },
+  {
+    "date": "08-08-2020",
+    "visits": 54,
+    "views": 874,
+    "hits": 569
+  },
+  {
+    "date": "08-09-2020",
+    "visits": 90,
+    "views": 895,
+    "hits": 578
+  },
+  {
+    "date": "08-10-2020",
+    "visits": 97,
+    "views": 902,
+    "hits": 589
+  },
+  {
+    "date": "08-11-2020",
+    "visits": 103,
+    "views": 910,
+    "hits": 592
+  },  
+  {
+    "date": "08-12-2020",
+    "visits": 118,
+    "views": 918,
+    "hits": 606
+  },  
+  {
+    "date": "08-13-2020",
+    "visits": 136,
+    "views": 921,
+    "hits": 6
+  },  
+  {
+    "date": "08-14-2020",
+    "visits": 112,
+    "views": 934,
+    "hits": 24
+  },    
+  {
+    "date": "08-15-2020",
+    "visits": 124,
+    "views": 950,
+    "hits": 12
+  },    
+  {
+    "date": "08-16-2020",
+    "visits": 136,
+    "views": 951,
+    "hits": 23
+
+  },                  
+];
+chart.data = JSON.parse(JSON.stringify(chartData));
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+
+
+//read file json merge data in charData array
+//Create a functiona that describe time 
