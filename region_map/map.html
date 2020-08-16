@@ -1,0 +1,218 @@
+<!-- Styles -->
+<head>
+  <title>Map</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/vietnamLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+window.onload = function() {
+
+/**
+ * This demo uses our own method of determining user's location
+ * It is not public web service that you can use
+ * You'll need to find your own. We recommend http://www.maxmind.com
+ */
+jQuery.getJSON( "https://data.vietnam.opendevelopmentmekong.net/en/dataset/100d98c8-4ffc-4b5b-b2a5-c6b71d2eff66/resource/c8b14875-6ab9-4a3e-99e9-8352f695cd77/download/covid-19-provinces.geojson", function( geo ) {
+
+  // Default map
+  var defaultMap = "vietnamLow";
+  var data = [
+      {
+          "id": "VN-09",
+          "value": 4
+      },
+      {
+          "id": "VN-20",
+          "value": 1
+      },
+      {
+          "id": "VN-21",
+          "value": 1
+      },
+      {
+          "id": "VN-25",
+          "value": 7
+      },
+      {
+          "id": "VN-27",
+          "value": 86
+      },
+      {
+          "id": "VN-29",
+          "value": 5
+      },
+      {
+          "id": "VN-33",
+          "value": 3
+      },
+      {
+          "id": "VN-34",
+          "value": 1
+      },
+      {
+          "id": "VN-39",
+          "value": 2
+      },
+      {
+          "id": "VN-54",
+          "value": 6
+      },
+      {
+          "id": "VN-63",
+          "value": 1
+      },
+      {
+          "id": "VN-DN",
+          "value": 325
+      },
+      {
+          "id": "VN-HN",
+          "value": 7
+      }
+    ];
+  
+  // calculate which map to be used
+  var currentMap = defaultMap;
+  var title = "";
+  if ( am4geodata_data_countries2[ geo.country_code ] !== undefined ) {
+    currentMap = am4geodata_data_countries2[ geo.country_code ][ "maps" ][ 0 ];
+
+    // add country title
+    if ( am4geodata_data_countries2[ geo.country_code ][ "country" ] ) {
+      title = am4geodata_data_countries2[ geo.country_code ][ "country" ];
+    }
+
+  }
+  
+  // Create map instance
+  var chart = am4core.create("chartdiv", am4maps.MapChart);
+  
+  chart.titles.create().text = title;
+
+  // Set map definition
+  chart.geodataSource.url = "https://www.amcharts.com/lib/4/geodata/json/" + currentMap + ".json";
+  chart.geodataSource.events.on("parseended", function(ev) {
+    polygonSeries.data = data;
+    //chart.dataSource.url = "https://raw.githubusercontent.com/longphan98/ncov/master/dat.json";
+    //chart.dataSource.load();
+  })
+
+  // Set projection
+  chart.projection = new am4maps.projections.Mercator();
+
+  // Create map polygon series
+  var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+  //Set min/max fill color for each area
+  polygonSeries.heatRules.push({
+    property: "fill",
+    target: polygonSeries.mapPolygons.template,
+    min: am4core.color("#C5413F").brighten(1),
+    max: am4core.color("#C5413F").brighten(-0.2)
+  });
+
+  // Make map load polygon data (state shapes and names) from GeoJSON
+  polygonSeries.useGeodata = true;
+
+  // Set up heat legend
+  let heatLegend = chart.createChild(am4maps.HeatLegend);
+  heatLegend.id = "heatLegend";
+  heatLegend.series = polygonSeries;
+  heatLegend.align = "right";
+  heatLegend.valign = "bottom";
+  heatLegend.width = am4core.percent(25);
+  heatLegend.marginRight = am4core.percent(2);
+  heatLegend.background.fill = am4core.color("#000");
+  heatLegend.background.fillOpacity = 0.05;
+  heatLegend.padding(5, 5, 5, 5);
+
+  // Set up custom heat map legend labels using axis ranges
+  var minRange = heatLegend.valueAxis.axisRanges.create();
+  minRange.label.horizontalCenter = "left";
+  //minRange.label.text = "Little";
+  var maxRange = heatLegend.valueAxis.axisRanges.create();
+  maxRange.label.horizontalCenter = "right";
+  //maxRange.label.text = "A lot!";
+
+  // Blank out internal heat legend value axis labels
+  heatLegend.valueAxis.renderer.labels.template.adapter.add("text", function(labelText) {
+    return "";
+  });
+
+  // Configure series tooltip
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  polygonTemplate.tooltipText = "{name}: {value}";
+  polygonTemplate.nonScalingStroke = true;
+  polygonTemplate.strokeWidth = 0.5;
+  polygonSeries.events.on("datavalidated", function (ev) {
+    let heatLegend = ev.target.map.getKey("heatLegend");
+
+    let min = heatLegend.series.dataItem.values.value.low;
+    let minRange = heatLegend.valueAxis.axisRanges.getIndex(0);
+    minRange.value = min;
+    minRange.label.text = "" + heatLegend.numberFormatter.format(min);
+
+    let max = heatLegend.series.dataItem.values.value.high;
+    let maxRange = heatLegend.valueAxis.axisRanges.getIndex(1);
+    maxRange.value = max;
+    maxRange.label.text = "" + heatLegend.numberFormatter.format(max);
+  });
+
+  var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+  var imageSeriesTemplate = imageSeries.mapImages.template;
+
+  imageSeriesTemplate.propertyFields.href = "href";
+  // Set property fields
+  imageSeriesTemplate.propertyFields.latitude = "latitude";
+  imageSeriesTemplate.propertyFields.longitude = "longitude";
+  var marker = imageSeriesTemplate.createChild(am4core.Image);
+  marker.propertyFields.href = "href";
+  marker.width = 80;
+  marker.height = 80;
+  marker.nonScaling = true;
+  marker.tooltipText = "{title}";
+  marker.horizontalCenter = "middle";
+  marker.verticalCenter = "bottom";
+  // Add data for the three cities
+  imageSeries.data = [{
+    "latitude": 16.320256,
+    "longitude": 112.048184,
+    "title": "Hoàng Sa",
+    "href": "hs1.png"
+  }, {
+    "latitude": 10.892756,
+    "longitude": 114.544676,
+    "title": "Trường Sa",
+    "href": "ts1.png"
+  }];
+  
+});
+
+};
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
