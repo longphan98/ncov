@@ -1,0 +1,88 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 1500px;
+  height: 750px; 
+  font-size: 14px;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+
+// Add data
+chart.dataSource.url = "https://raw.githubusercontent.com/longphan98/ncov/master/stacked_column/data.json";
+
+// Create axes
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "date";
+categoryAxis.renderer.grid.template.location = 0;
+
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.inside = true;
+valueAxis.renderer.labels.template.disabled = true;
+valueAxis.min = 0;
+
+// Create series
+function createSeries(field) {
+  
+  // Set up series
+  var series = chart.series.push(new am4charts.ColumnSeries());
+  series.name = field;
+  series.dataFields.valueY = field;
+  series.dataFields.categoryX = "date";
+  series.sequencedInterpolation = true;
+  
+  // Make it stacked
+  series.stacked = true;
+  
+  // Configure columns
+  series.columns.template.width = am4core.percent(40);
+  series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
+  
+  // Add label
+  var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+  labelBullet.label.text = "{valueY}";
+  labelBullet.locationY = 0.5;
+  labelBullet.label.hideOversized = true;
+  
+  return series;
+}
+
+createSeries("Bắc Giang");
+createSeries("Hà Nam");
+createSeries("Hà Nội");
+createSeries("Hải Dương");
+createSeries("Lạng Sơn");
+createSeries("Quảng Nam");
+createSeries("Quảng Ngãi");
+createSeries("Quảng Trị");
+createSeries("TP. Hồ Chí Minh");
+createSeries("Đà Nẵng");
+createSeries("Đắk Lắk");
+
+// Legend
+chart.legend = new am4charts.Legend();
+
+chart.cursor = new am4charts.XYCursor();
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
