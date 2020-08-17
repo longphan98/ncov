@@ -1,0 +1,113 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+
+// Add data
+//chart.dataSource.url = "https://raw.githubusercontent.com/longphan98/ncov/master/data.json"
+chart.data = [{
+  "date": "2020-08-14",
+  "Bắc Giang": 0,
+  "Hà Nam": 0,
+  "Hà Nội": 0,
+  "Hải Dương": 0,
+  "Lạng Sơn": 0,
+  "Quảng Nam": 0,
+  "Quảng Ngãi": 0,
+  "Quảng Trị": 0,
+  "TP. Hồ Chí Minh": 0,
+  "Đà Nẵng": 1,
+  "Đắk Lắk": 0
+ }, {
+  "date": "2020-08-14",
+  "Bắc Giang": 0,
+  "Hà Nam": 0,
+  "Hà Nội": 0,
+  "Hải Dương": 0,
+  "Lạng Sơn": 0,
+  "Quảng Nam": 0,
+  "Quảng Ngãi": 0,
+  "Quảng Trị": 0,
+  "TP. Hồ Chí Minh": 0,
+  "Đà Nẵng": 1,
+  "Đắk Lắk": 0
+ }]
+console.log(chart.data)
+
+// Create axes
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.dataFields.category = "date";
+dateAxis.renderer.grid.template.location = 0;
+
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.inside = true;
+valueAxis.renderer.labels.template.disabled = true;
+valueAxis.min = 0;
+
+// Create series
+function createSeries(field, name) {
+  
+  // Set up series
+  var series = chart.series.push(new am4charts.ColumnSeries());
+  series.name = name;
+  series.dataFields.valueY = field;
+  series.dataFields.categoryX = "date";
+  series.sequencedInterpolation = true;
+  
+  // Make it stacked
+  series.stacked = true;
+  
+  // Configure columns
+  series.columns.template.width = am4core.percent(60);
+  series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
+  
+  // Add label
+  var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+  labelBullet.label.text = "{valueY}";
+  labelBullet.locationY = 0.5;
+  labelBullet.label.hideOversized = true;
+  
+  return series;
+}
+
+createSeries("Bắc Giang", "Bắc Giang");
+createSeries("Hà Nam", "Hà Nam");
+createSeries("Hà Nội", "Hà Nội");
+createSeries("Hải Dương", "Hải Dương");
+createSeries("Lạng Sơn", "Lạng Sơn");
+createSeries("Quảng Nam", "Quảng Nam");
+createSeries("Quảng Ngãi", "Quảng Ngãi");
+createSeries("Quảng Trị", "Quảng Trị");
+createSeries("TP. Hồ Chí Minh", "TP. Hồ Chí Minh");
+createSeries("Đà Nẵng", "Đà Nẵng");
+createSeries("Đắk Lắk", "Đắk Lắk");
+
+// Legend
+chart.legend = new am4charts.Legend();
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
