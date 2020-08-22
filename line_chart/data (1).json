@@ -1,0 +1,56 @@
+[
+{
+"category": "Từ 0 đến 9 tuổi",
+"recovered": 10,
+"dead": 0,
+"recovering": 18
+},
+{
+"category": "Từ 10 đến 19 tuổi",
+"recovered": 30,
+"dead": 0,
+"recovering": 26
+},
+{
+"category": "Từ 20 đến 29 tuổi",
+"recovered": 151,
+"dead": 0,
+"recovering": 69
+},
+{
+"category": "Từ 30 đến 39 tuổi",
+"recovered": 98,
+"dead": 2,
+"recovering": 101
+},
+{
+"category": "Từ 40 đến 49 tuổi",
+"recovered": 66,
+"dead": 1,
+"recovering": 85
+},
+{
+"category": "Từ 50 đến 59 tuổi",
+"recovered": 50,
+"dead": 5,
+"recovering": 91
+},
+{
+"category": "Từ 60 đến 69 tuổi",
+"recovered": 25,
+"dead": 10,
+"recovering": 77
+},
+{
+"category": "Từ 70 đến 79 tuổi",
+"recovered": 6,
+"dead": 0,
+"recovering": 27
+},
+{
+"category": "Từ 80 tuổi trở lên",
+"recovered": 1,
+"dead": 4,
+"recovering": 16
+}
+]
