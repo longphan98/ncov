@@ -22,4 +22,16 @@
   "recoverd": 67,
   "treated": 89,
   "total": 110
+  }, {
+  "date": "08-05-2020",
+  "new": 98,
+  "recoverd": 73,
+  "treated": 96,
+  "total": 120
+  }, {
+  "date": "08-04-2020",
+  "new": 115,
+  "recoverd": 59,
+  "treated": 65,
+  "total": 200
   }]
