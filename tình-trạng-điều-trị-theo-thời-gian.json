@@ -1,345 +1,114 @@
 [
-	{
-	"date": "07-02-2020",
-	"total": 355,
-	"new": 0,
-	"recovering": 15,
-	"recovered": 340
-	},
-	{
-	"date": "07-03-2020",
-	"total": 355,
-	"new": 0,
-	"recovering": 20,
-	"recovered": 335
-	},
-	{
-	"date": "07-04-2020",
-	"total": 355,
-	"new": 0,
-	"recovering": 20,
-	"recovered": 335
-	},
-	{
-	"date": "07-05-2020",
-	"total": 355,
-	"new": 0,
-	"recovering": 20,
-	"recovered": 335
-	},
-	{
-	"date": "07-06-2020",
-	"total": 369,
-	"new": 14,
-	"recovering": 34,
-	"recovered": 335
-	},
-	{
-	"date": "07-07-2020",
-	"total": 369,
-	"new": 0,
-	"recovering": 24,
-	"recovered": 345
-	},
-	{
-	"date": "07-08-2020",
-	"total": 369,
-	"new": 0,
-	"recovering": 22,
-	"recovered": 347
-	},
-	{
-	"date": "07-09-2020",
-	"total": 369,
-	"new": 0,
-	"recovering": 22,
-	"recovered": 347
-	},
-	{
-	"date": "07-10-2020",
-	"total": 370,
-	"new": 1,
-	"recovering": 20,
-	"recovered": 350
-	},
-	{
-	"date": "07-11-2020",
-	"total": 372,
-	"new": 2,
-	"recovering": 22,
-	"recovered": 350
-	},
-	{
-	"date": "07-12-2020",
-	"total": 373,
-	"new": 1,
-	"recovering": 23,
-	"recovered": 350
-	},
-	{
-	"date": "07-13-2020",
-	"total": 373,
-	"new": 0,
-	"recovering": 21,
-	"recovered": 352
-	},
-	{
-	"date": "07-14-2020",
-	"total": 381,
-	"new": 8,
-	"recovering": 29,
-	"recovered": 352
-	},
-	{
-	"date": "07-15-2020",
-	"total": 382,
-	"new": 1,
-	"recovering": 29,
-	"recovered": 353
-	},
-	{
-	"date": "07-16-2020",
-	"total": 383,
-	"new": 1,
-	"recovering": 27,
-	"recovered": 356
-	},
-	{
-	"date": "07-17-2020",
-	"total": 383,
-	"new": 0,
-	"recovering": 27,
-	"recovered": 356
-	},
-	{
-	"date": "07-18-2020",
-	"total": 384,
-	"new": 1,
-	"recovering": 28,
-	"recovered": 356
-	},
-	{
-	"date": "07-19-2020",
-	"total": 384,
-	"new": 0,
-	"recovering": 28,
-	"recovered": 356
-	},
-	{
-	"date": "07-20-2020",
-	"total": 396,
-	"new": 12,
-	"recovering": 36,
-	"recovered": 360
-	},
-	{
-	"date": "07-21-2020",
-	"total": 402,
-	"new": 6,
-	"recovering": 37,
-	"recovered": 365
-	},
-	{
-	"date": "07-22-2020",
-	"total": 408,
-	"new": 6,
-	"recovering": 43,
-	"recovered": 365
-	},
-	{
-	"date": "07-23-2020",
-	"total": 412,
-	"new": 4,
-	"recovering": 47,
-	"recovered": 365
-	},
-	{
-	"date": "07-24-2020",
-	"total": 416,
-	"new": 4,
-	"recovering": 51,
-	"recovered": 365
-	},
-	{
-	"date": "07-25-2020",
-	"total": 417,
-	"new": 1,
-	"recovering": 70,
-	"recovered": 347
-	},
-	{
-	"date": "07-26-2020",
-	"total": 420,
-	"new": 3,
-	"recovering": 73,
-	"recovered": 347
-	},
-	{
-	"date": "07-27-2020",
-	"total": 431,
-	"new": 11,
-	"recovering": 84,
-	"recovered": 347
-	},
-	{
-	"date": "07-28-2020",
-	"total": 437,
-	"new": 6,
-	"recovering": 90,
-	"recovered": 347
-	},
-	{
-	"date": "07-29-2020",
-	"total": 450,
-	"new": 13,
-	"recovering": 103,
-	"recovered": 347
-	},
-	{
-	"date": "07-30-2020",
-	"total": 464,
-	"new": 14,
-	"recovering": 117,
-	"recovered": 347
-	},
-	{
-	"date": "07-31-2020",
-	"total": 545,
-	"new": 81,
-	"recovering": 198,
-	"recovered": 347
-	},
-	{
-	"date": "08-01-2020",
-	"total": 585,
-	"new": 40,
-	"recovering": 238,
-	"recovered": 347
-	},
-	{
-	"date": "08-02-2020",
-	"total": 619,
-	"new": 34,
-	"recovering": 272,
-	"recovered": 347
-	},
-	{
-	"date": "08-03-2020",
-	"total": 641,
-	"new": 22,
-	"recovering": 269,
-	"recovered": 372
-	},
-	{
-	"date": "08-04-2020",
-	"total": 669,
-	"new": 28,
-	"recovering": 297,
-	"recovered": 372
-	},
-	{
-	"date": "08-05-2020",
-	"total": 713,
-	"new": 44,
-	"recovering": 341,
-	"recovered": 372
-	},
-	{
-	"date": "08-06-2020",
-	"total": 748,
-	"new": 35,
-	"recovering": 376,
-	"recovered": 372
-	},
-	{
-	"date": "08-07-2020",
-	"total": 784,
-	"new": 36,
-	"recovering": 412,
-	"recovered": 372
-	},
-	{
-	"date": "08-08-2020",
-	"total": 810,
-	"new": 26,
-	"recovering": 438,
-	"recovered": 372
-	},
-	{
-	"date": "08-09-2020",
-	"total": 841,
-	"new": 31,
-	"recovering": 469,
-	"recovered": 372
-	},
-	{
-	"date": "08-10-2020",
-	"total": 847,
-	"new": 6,
-	"recovering": 475,
-	"recovered": 372
-	},
-	{
-	"date": "08-11-2020",
-	"total": 863,
-	"new": 16,
-	"recovering": 491,
-	"recovered": 372
-	},
-	{
-	"date": "08-12-2020",
-	"total": 880,
-	"new": 17,
-	"recovering": 508,
-	"recovered": 372
-	},
-	{
-	"date": "08-13-2020",
-	"total": 905,
-	"new": 3,
-	"recovering": 496,
-	"recovered": 409
-	},
-	{
-	"date": "08-14-2020",
-	"total": 929,
-	"new": 24,
-	"recovering": 535,
-	"recovered": 394
-	},
-	{
-	"date": "08-15-2020",
-	"total": 930,
-	"new": 1,
-	"recovering": 471,
-	"recovered": 437
-	},
-	{
-	"date": "08-16-2020",
-	"total": 930,
-	"new": 0,
-	"recovering": 493,
-	"recovered": 437
-	},
-	{
-	"date": "08-17-2020",
-	"total": 930,
-	"new": 0,
-	"recovering": 493,
-	"recovered": 437
-	},
-	{
-	"date": "08-18-2020",
-	"total": 930,
-	"new": 0,
-	"recovering": 493,
-	"recovered": 437
-	},
-	{
-	"date": "08-19-2020",
-	"total": 930,
-	"new": 0,
-	"recovering": 493,
-	"recovered": 437
-	}
+  {
+    "date": "08-01-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 156
+  }, 
+  {
+    "date": "08-02-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 598
+  }, 
+  {
+    "date": "08-03-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 156
+  }, 
+  {
+    "date": "08-04-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 156
+  },
+  {
+    "date": "08-05-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 156
+  },
+  {
+    "date": "08-06-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 789
+  },
+  {
+    "date": "08-07-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 748
+  },
+  {
+    "date": "08-08-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 891
+  },
+  {
+    "date": "08-09-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 748
+  },
+  {
+    "date": "08-10-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 156
+  },
+  {
+    "date": "08-11-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 123
+  },  
+  {
+    "date": "08-12-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 147
+  },  
+  {
+    "date": "08-13-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 789
+  },  
+  {
+    "date": "08-14-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 145
+  },    
+  {
+    "date": "08-15-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 962
+  },    
+  {
+    "date": "08-16-2020",
+    "new": 0,
+    "recoverd": 0,
+    "treated": 0,
+    "total": 789
+  },                  
 ]
