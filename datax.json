@@ -10,4 +10,16 @@
   "recoverd": 35,
   "treated": 48,
   "total": 78
+  }, {
+  "date": "08-03-2020",
+  "new": 56,
+  "recoverd": 48,
+  "treated": 72,
+  "total": 96
+  }, {
+  "date": "08-04-2020",
+  "new": 78,
+  "recoverd": 67,
+  "treated": 89,
+  "total": 110
   }]
