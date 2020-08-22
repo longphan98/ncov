@@ -1,114 +1,13 @@
-[
-  {
-    "date": "08-01-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  }, 
-  {
-    "date": "08-02-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  }, 
-  {
-    "date": "08-03-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  }, 
-  {
-    "date": "08-04-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-05-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-06-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-07-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-08-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-09-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-10-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },
-  {
-    "date": "08-11-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },  
-  {
-    "date": "08-12-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },  
-  {
-    "date": "08-13-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },  
-  {
-    "date": "08-14-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },    
-  {
-    "date": "08-15-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },    
-  {
-    "date": "08-16-2020",
-    "new": 0,
-    "recoverd": 0,
-    "treated": 0,
-    "total"
-  },                  
-]
+[{
+  "date": "08-01-2020",
+  "new": 0,
+  "recoverd": 0,
+  "treated": 0,
+  "total"
+}, {
+  "date": "08-02-2020",
+  "new": 0,
+  "recoverd": 0,
+  "treated": 0,
+  "total"
+  }]
