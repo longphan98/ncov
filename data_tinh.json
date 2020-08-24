@@ -1,0 +1,898 @@
+{
+"01": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"02": [
+{
+"status": "Đã hồi phục",
+"value": 2
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"03": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"04": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"05": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"06": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"07": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"09": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"13": [
+{
+"status": "Đã hồi phục",
+"value": 11
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"14": [
+{
+"status": "Đã hồi phục",
+"value": 4
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"15": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"18": [
+{
+"status": "Đã hồi phục",
+"value": 21
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"20": [
+{
+"status": "Đã hồi phục",
+"value": 30
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 1
+}
+],
+"21": [
+{
+"status": "Đã hồi phục",
+"value": 16
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 3
+}
+],
+"22": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"23": [
+{
+"status": "Đã hồi phục",
+"value": 4
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 1
+}
+],
+"24": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"25": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 1
+},
+{
+"status": "Đang điều trị",
+"value": 6
+}
+],
+"26": [
+{
+"status": "Đã hồi phục",
+"value": 2
+},
+{
+"status": "Tử vong",
+"value": 1
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"27": [
+{
+"status": "Đã hồi phục",
+"value": 6
+},
+{
+"status": "Tử vong",
+"value": 5
+},
+{
+"status": "Đang điều trị",
+"value": 85
+}
+],
+"28": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"29": [
+{
+"status": "Đã hồi phục",
+"value": 3
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 6
+}
+],
+"30": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"31": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"32": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"33": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"34": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 3
+}
+],
+"35": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"36": [
+{
+"status": "Đã hồi phục",
+"value": 2
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"37": [
+{
+"status": "Đã hồi phục",
+"value": 4
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"39": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 3
+}
+],
+"40": [
+{
+"status": "Đã hồi phục",
+"value": 9
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"41": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"43": [
+{
+"status": "Đã hồi phục",
+"value": 27
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 13
+}
+],
+"44": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"45": [
+{
+"status": "Đã hồi phục",
+"value": 6
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"46": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"47": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 1
+}
+],
+"49": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"50": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"51": [
+{
+"status": "Đã hồi phục",
+"value": 2
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"52": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"53": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"54": [
+{
+"status": "Đã hồi phục",
+"value": 4
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 2
+}
+],
+"55": [
+{
+"status": "Đã hồi phục",
+"value": 24
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"56": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"57": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"58": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"59": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"61": [
+{
+"status": "Đã hồi phục",
+"value": 5
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 14
+}
+],
+"63": [
+{
+"status": "Đã hồi phục",
+"value": 4
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 1
+}
+],
+"66": [
+{
+"status": "Đã hồi phục",
+"value": 5
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"67": [
+{
+"status": "Đã hồi phục",
+"value": 3
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 5
+}
+],
+"68": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"69": [
+{
+"status": "Đã hồi phục",
+"value": 1
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"70": [
+{
+"status": "Đã hồi phục",
+"value": 19
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"71": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"72": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"73": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"CT": [
+{
+"status": "Đã hồi phục",
+"value": 2
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 0
+}
+],
+"DN": [
+{
+"status": "Đã hồi phục",
+"value": 32
+},
+{
+"status": "Tử vong",
+"value": 15
+},
+{
+"status": "Đang điều trị",
+"value": 313
+}
+],
+"HN": [
+{
+"status": "Đã hồi phục",
+"value": 121
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 39
+}
+],
+"HP": [
+{
+"status": "Đã hồi phục",
+"value": 0
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 3
+}
+],
+"SG": [
+{
+"status": "Đã hồi phục",
+"value": 61
+},
+{
+"status": "Tử vong",
+"value": 0
+},
+{
+"status": "Đang điều trị",
+"value": 10
+}
+]
+}
